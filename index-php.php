@@ -11,30 +11,30 @@ require __DIR__ . '/database.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Google Faq</title>
 </head>
 <body>
     <header>
-        <img class="logo-img" src="../img/spotify.png" alt="logo spotify">
+        <img class="logo-img" src="img/spotify.png" alt="logo spotify">
     </header>
     <main>
         <section>
             <div class="container">
                 <div class="card-wrapper">
-                    <?php foreach($database as $single_song) { ?> 
+                    <?php foreach($database as $song) { ?> 
                     <div class="cards">                    
                         <div class="cards-image">
-                            <img src="<?php echo $single_song['poster']; ?>" alt="database.title">
+                            <img src="<?php echo $song['poster']; ?>" alt="database.title">
                         </div>
                         <div class="cards-title">
-                            <?php echo $single_song['title']; ?>
+                            <?php echo $song['title']; ?>
                         </div>
                         <div class="cards-author">
-                            <?php echo $single_song['author']; ?>
+                            <?php echo $song['author']; ?>
                         </div>
                         <div class="cards-year">
-                            <?php echo $single_song['year']; ?>
+                            <?php echo $song['year']; ?>
                         </div>
                     </div> 
                     <?php } ?>  
